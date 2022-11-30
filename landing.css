@@ -1,0 +1,174 @@
+@charset "UTF-8";
+html
+
+body{
+  margin: 0;
+  height: 100%;
+  background-color: rgb(7, 7, 7);
+  background-size: cover;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  color:  #fff4ea;
+
+}
+  .hero_image {
+    background-image: url(images/opening.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+
+/*NAV BAR*/
+nav ul {
+    display:flex;
+    align-items:center;
+    justify-content: right;
+    background-color: #fa5974;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+    padding: .5em;
+    margin: 0em;
+}
+li {
+  margin: 0 1em;
+}
+a {
+  display: block;
+  padding: 8px;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #fff4ea;
+}
+a:visited {
+  color: #fff4ea;
+}
+a:hover {
+  background:#ffbe67;
+}
+a:active {
+  color: #fff4ea;
+}
+  
+
+.header-text {
+color: #ffbe67;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-shadow: .2em .2em .3em gray;
+}
+
+#container {
+  display:grid; 
+  grid-template-rows: auto auto auto ;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-areas: 
+    'about about  about'
+    'image1 image1  image1'
+    'tile1  tile2 tile3'
+    'image2 image2  image2';
+  margin: 0 auto;
+}
+.about {
+  grid-area: about;
+  object-fit: cover;
+}
+.big_img1 {
+  grid-area: image1;
+  object-fit: cover;
+  margin: 40px;
+}
+.tile1 {
+  grid-area: tile1;
+  object-fit: cover;
+  margin: 20px;
+
+}
+.tile2 {
+  grid-area: tile2;
+  object-fit: cover;
+  margin: 20px;
+
+}
+.tile3 {
+  grid-area: tile3;
+  object-fit: cover;
+  margin: 20px;
+  
+}
+.big_img2{
+  grid-area: image2;
+  object-fit: cover;
+  margin: 40px;
+}
+img {
+  max-width: 100%;
+}
+
+/*grid styles*/
+
+.big_img1 .big_img2 {
+  padding: 40px;
+}
+.about{
+  padding: 40px;
+}
+
+/*Header Style*/
+.h2 {
+    color: #ffbe67;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-shadow: .2em .2em .3em #fa5974;
+    justify-content: center;
+}
+
+.footer {
+    color: #fa5974;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+}
+
+/*media quieries*/
+@media screen and (max-width: 55em) {
+  .h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+  }
+  .h2 {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+  text-shadow: none;}
+  
+  .text {font-size: x-small;}
+}
+
+@media screen and (max-width: 55em) {
+  .big_img1 {width: 300px;
+  margin: 10px;}
+
+  .big_img2 {width: 300px;
+    margin: 10px;
+  padding: 70px 0 40px 0px;}
+
+  .tile1 {width: 200px;
+  height: 100px;
+  margin: 10px;
+  }
+
+  .tile2 {width: 200px;
+    height: 150px;
+    margin: 10px;
+  }
+
+  .tile3 {width: 200px;
+      height: 150px;
+      margin: 10px;}
+
+  #container {margin: 10px;}
+}
